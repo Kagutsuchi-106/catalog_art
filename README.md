@@ -145,6 +145,7 @@ cd project_news
 
 
 - [Репозиторий](git@github.com:Kagutsuchi-106/catalog.git)
+https://kagutsuchi-106.github.io/catalog_art/index.html
 
 
 
