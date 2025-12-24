@@ -1,0 +1,14 @@
+.footer {
+    margin-top: 80px;
+    padding-top: var(--spacing-xl);
+    border-top: 1px solid var(--color-gray);
+    text-align: center;
+}
+
+.footer__text {
+    font-family: var(--font-body);
+    font-size: 14px;
+    margin-bottom: var(--spacing-xs);
+    color: var(--color-dark);
+    opacity: 0.6;
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru" itemscope itemtype="https://schema.org/Event">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Детальная информация о событии современного искусства. Куратор, художники, концепция, график работы и место проведения." />
+        <meta name="keywords" content="событие искусства, выставка, перформанс, мастер-класс, лекция" />
+        <meta name="author" content="Каталог современного искусства — Тирасполь" />
+        
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="event" />
+        <meta property="og:title" content="Событие - Каталог современного искусства — Тирасполь" />
+        <meta property="og:description" content="Детальная информация о событии современного искусства" />
+        <meta property="og:locale" content="ru_RU" />
+        
+        <!-- Twitter -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Событие - Каталог современного искусства — Тирасполь" />
+        <meta name="twitter:description" content="Детальная информация о событии современного искусства" />
+        
+        <title>Событие - Каталог современного искусства — Тирасполь</title>
+        <link rel="stylesheet" href="styles/main.css" />
+    </head>
+    <body class="container">
+        <header class="header">
+            <div class="header__container">
+                <button class="header__burger" type="button" aria-label="Открыть меню" aria-expanded="false" id="burgerBtn">
+                    <span class="header__burger-line header__burger-line--first"></span>
+                    <span class="header__burger-line header__burger-line--second"></span>
+                    <span class="header__burger-line header__burger-line--third"></span>
+                </button>
+                <nav class="nav" id="mainNav">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="index.html" class="nav__link">Главная</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="events.html" class="nav__link">События</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="artists.html" class="nav__link">Художники</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="map.html" class="nav__link">Карта</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="calendar.html" class="nav__link">Календарь</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="budget.html" class="nav__link">Бюджет</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main class="main">
+            <section class="section">
+                <div id="event-content" class="event-content"></div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p class="footer__text">
+                Каталог современного искусства — Тирасполь
+            </p>
+            <p class="footer__text">Учебный проект</p>
+        </footer>
+        <script src="scripts/polyfills.js"></script>
+        <script src="scripts/data.js"></script>
+        <script src="scripts/common.js"></script>
+        <script src="scripts/header.js"></script>
+        <script src="scripts/event.js"></script>
+    </body>
+</html>

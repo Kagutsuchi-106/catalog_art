@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ru" itemscope itemtype="https://schema.org/CollectionPage">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Полный каталог событий современного искусства в Тирасполе. Выставки, перформансы, мастер-классы, лекции с фильтрацией по типу, цене, художникам и местам." />
+        <meta name="keywords" content="события искусства, выставки Тирасполь, перформансы, мастер-классы, лекции по искусству" />
+        <meta name="author" content="Каталог современного искусства — Тирасполь" />
+        
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="События - Каталог современного искусства — Тирасполь" />
+        <meta property="og:description" content="Полный каталог событий современного искусства в Тирасполе" />
+        <meta property="og:locale" content="ru_RU" />
+        
+        <!-- Twitter -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="События - Каталог современного искусства — Тирасполь" />
+        <meta name="twitter:description" content="Полный каталог событий современного искусства в Тирасполе" />
+        
+        <title>События - Каталог современного искусства — Тирасполь</title>
+        <link rel="stylesheet" href="styles/main.css" />
+    </head>
+    <body class="container">
+        <header class="header">
+            <div class="header__container">
+                <button class="header__burger" type="button" aria-label="Открыть меню" aria-expanded="false" id="burgerBtn">
+                    <span class="header__burger-line header__burger-line--first"></span>
+                    <span class="header__burger-line header__burger-line--second"></span>
+                    <span class="header__burger-line header__burger-line--third"></span>
+                </button>
+                <nav class="nav" id="mainNav">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="index.html" class="nav__link">Главная</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="events.html" class="nav__link">События</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="artists.html" class="nav__link">Художники</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="map.html" class="nav__link">Карта</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="calendar.html" class="nav__link">Календарь</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="budget.html" class="nav__link">Бюджет</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main class="main">
+            <section class="section">
+                <h2 class="section__title">Актуальные события</h2>
+                
+                <div class="search-section" role="search">
+                    <label for="searchInput" class="visually-hidden">Поиск событий</label>
+                    <input type="text" 
+                           class="search-input" 
+                           id="searchInput" 
+                           placeholder="Поиск по названию, ключевым словам, имени художника..."
+                           aria-label="Поиск событий"
+                           aria-describedby="searchDescription"
+                           autocomplete="off">
+                    <span id="searchDescription" class="visually-hidden">Введите название события, ключевые слова или имя художника для поиска</span>
+                    <button class="search-clear" id="searchClear" aria-label="Очистить поиск" style="display: none;" type="button">✕</button>
+                </div>
+                
+                <div class="filters" role="group" aria-label="Фильтры событий">
+                    <div class="filters__group">
+                        <label class="filters__label" id="filter-type-label">Тип события</label>
+                        <div class="filters__buttons" role="group" aria-labelledby="filter-type-label">
+                            <button class="filter-btn active" data-filter="type" data-value="all" type="button" aria-pressed="true">Все</button>
+                            <button class="filter-btn" data-filter="type" data-value="Выставка" type="button" aria-pressed="false">Выставка</button>
+                            <button class="filter-btn" data-filter="type" data-value="Лекция" type="button" aria-pressed="false">Лекция</button>
+                            <button class="filter-btn" data-filter="type" data-value="Мастер-класс" type="button" aria-pressed="false">Мастер-класс</button>
+                            <button class="filter-btn" data-filter="type" data-value="Перформанс" type="button" aria-pressed="false">Перформанс</button>
+                            <button class="filter-btn" data-filter="type" data-value="Кинопоказ" type="button" aria-pressed="false">Кинопоказ</button>
+                        </div>
+                    </div>
+                    
+                    <div class="filters__group">
+                        <label class="filters__label" id="filter-genre-label">Жанр/направление</label>
+                        <div class="filters__buttons" role="group" aria-labelledby="filter-genre-label">
+                            <button class="filter-btn active" data-filter="genre" data-value="all" type="button" aria-pressed="true">Все</button>
+                            <button class="filter-btn" data-filter="genre" data-value="Современная живопись">Современная живопись</button>
+                            <button class="filter-btn" data-filter="genre" data-value="Фотография">Фотография</button>
+                            <button class="filter-btn" data-filter="genre" data-value="Скульптура и инсталляция">Скульптура и инсталляция</button>
+                            <button class="filter-btn" data-filter="genre" data-value="Видео-арт и медиа-искусство">Видео-арт и медиа-искусство</button>
+                            <button class="filter-btn" data-filter="genre" data-value="Графика и иллюстрация">Графика и иллюстрация</button>
+                        </div>
+                    </div>
+                    
+                    <div class="filters__group">
+                        <label class="filters__label">Дата</label>
+                        <div class="filters__buttons">
+                            <button class="filter-btn active" data-filter="date" data-value="all">Все даты</button>
+                            <button class="filter-btn" data-filter="date" data-value="today">Сегодня</button>
+                            <button class="filter-btn" data-filter="date" data-value="week">На этой неделе</button>
+                            <button class="filter-btn" data-filter="date" data-value="month">В этом месяце</button>
+                        </div>
+                        <div class="date-range">
+                            <input type="date" class="filters__date-input" id="dateFrom" placeholder="От">
+                            <span class="date-range__separator">—</span>
+                            <input type="date" class="filters__date-input" id="dateTo" placeholder="До">
+                            <button class="filter-btn" id="applyDateRange">Применить</button>
+                        </div>
+                    </div>
+                    
+                    <div class="filters__group">
+                        <label class="filters__label">Цена</label>
+                        <div class="filters__buttons">
+                            <button class="filter-btn active" data-filter="price" data-value="all">Все</button>
+                            <button class="filter-btn" data-filter="price" data-value="free">Бесплатные</button>
+                            <button class="filter-btn" data-filter="price" data-value="low">До 300 ₽</button>
+                            <button class="filter-btn" data-filter="price" data-value="medium">300-700 ₽</button>
+                            <button class="filter-btn" data-filter="price" data-value="high">Более 700 ₽</button>
+                        </div>
+                    </div>
+                    
+                    <div class="filters__group">
+                        <label class="filters__label">Район</label>
+                        <div class="filters__buttons">
+                            <button class="filter-btn active" data-filter="district" data-value="all">Все районы</button>
+                            <button class="filter-btn" data-filter="district" data-value="Центральный">Центральный</button>
+                            <button class="filter-btn" data-filter="district" data-value="Левобережный">Левобережный</button>
+                            <button class="filter-btn" data-filter="district" data-value="Северный">Северный</button>
+                        </div>
+                    </div>
+                    
+                    <div class="filters__group">
+                        <label class="filters__label">Художник</label>
+                        <select class="filters__select" id="artistFilter">
+                            <option value="all">Все художники</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filters__group">
+                        <label class="filters__label">Место</label>
+                        <select class="filters__select" id="venueFilter">
+                            <option value="all">Все места</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filters__group">
+                        <label class="filters__label">Сортировка</label>
+                        <select class="filters__select" id="sortSelect">
+                            <option value="date">По дате</option>
+                            <option value="price-asc">По цене (возрастание)</option>
+                            <option value="price-desc">По цене (убывание)</option>
+                            <option value="alphabet">По алфавиту</option>
+                            <option value="popularity">По популярности</option>
+                        </select>
+                    </div>
+                    
+                    <button class="filters__reset" id="resetFilters">Сбросить фильтры</button>
+                </div>
+                
+                <div class="events-info">
+                    <span class="events-count">Найдено событий: <strong id="eventsCount" class="events-count__number">0</strong></span>
+                </div>
+                
+                <div class="events-grid" id="eventsGrid" role="list" aria-label="Список событий"></div>
+                
+                <div class="events-empty" id="eventsEmpty" style="display: none;" role="status" aria-live="polite">
+                    <p class="events-empty__text">По выбранным фильтрам события не найдены</p>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p class="footer__text">
+                Каталог современного искусства — Тирасполь
+            </p>
+            <p class="footer__text">Учебный проект</p>
+        </footer>
+        <script src="scripts/polyfills.js"></script>
+        <script src="scripts/data.js"></script>
+        <script src="scripts/common.js"></script>
+        <script src="scripts/header.js"></script>
+        <script src="scripts/events.js"></script>
+    </body>
+</html>

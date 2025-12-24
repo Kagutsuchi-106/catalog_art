@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Бюджет - Каталог современного искусства — Тирасполь</title>
+        <link rel="stylesheet" href="styles/main.css" />
+    </head>
+    <body class="container">
+        <header class="header">
+            <div class="header__container">
+                <button class="header__burger" type="button" aria-label="Открыть меню" aria-expanded="false" id="burgerBtn">
+                    <span class="header__burger-line header__burger-line--first"></span>
+                    <span class="header__burger-line header__burger-line--second"></span>
+                    <span class="header__burger-line header__burger-line--third"></span>
+                </button>
+                <nav class="nav" id="mainNav">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="index.html" class="nav__link">Главная</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="events.html" class="nav__link">События</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="artists.html" class="nav__link">Художники</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="map.html" class="nav__link">Карта</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="calendar.html" class="nav__link">Календарь</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="budget.html" class="nav__link">Бюджет</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main class="main">
+            <section class="section">
+                <h2 class="section__title">Калькулятор культурного бюджета</h2>
+                
+                <div class="budget-settings">
+                    <div class="budget-setting">
+                        <label for="planned-budget" class="budget-setting__label">Плановый бюджет на месяц (₽):</label>
+                        <input 
+                            type="number" 
+                            id="planned-budget" 
+                            class="budget-setting__input" 
+                            min="0" 
+                            step="100"
+                            placeholder="Введите сумму"
+                        >
+                    </div>
+                    
+                    <div class="ticket-category-selector">
+                        <label
+                            for="ticket-category-selector"
+                            class="ticket-category-selector__label"
+                            >Категория билета:</label
+                        >
+                        <select
+                            id="ticket-category-selector"
+                            class="ticket-category-selector__select"
+                        >
+                            <option value="full">Полный билет (1.0)</option>
+                            <option value="student">Студенческий (0.7)</option>
+                            <option value="discount">Льготный (0.5)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div id="budget-progress" class="budget-progress"></div>
+                
+                <div id="budget-visualization" class="budget-visualization"></div>
+                
+                <div id="budget-analytics" class="budget-analytics"></div>
+                
+                <div id="budget-content"></div>
+                
+                <div id="budget-export" class="budget-export"></div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p class="footer__text">
+                Каталог современного искусства — Тирасполь
+            </p>
+            <p class="footer__text">Учебный проект</p>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+        <script src="scripts/polyfills.js"></script>
+        <script src="scripts/data.js"></script>
+        <script src="scripts/common.js"></script>
+        <script src="scripts/header.js"></script>
+        <script src="scripts/budget.js"></script>
+    </body>
+</html>

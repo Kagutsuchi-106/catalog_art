@@ -1,0 +1,14 @@
+.section {
+    margin-bottom: 80px;
+    padding: 50px var(--spacing-xl);
+    background-color: var(--color-white);
+    border: 1px solid var(--color-gray);
+}
+
+.section__title {
+    margin-bottom: var(--spacing-xl);
+}
+
+.main {
+    margin-bottom: var(--spacing-xxl);
+}

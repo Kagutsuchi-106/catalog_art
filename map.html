@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru" itemscope itemtype="https://schema.org/Map">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Интерактивная карта культурных пространств Тирасполя. Музеи, галереи, арт-центры и креативные кластеры с полной информацией о режиме работы, контактах и мероприятиях." />
+        <meta name="keywords" content="карта Тирасполь, культурные пространства, музеи, галереи, арт-центры, карта искусства" />
+        <meta name="author" content="Каталог современного искусства — Тирасполь" />
+        
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Карта - Каталог современного искусства — Тирасполь" />
+        <meta property="og:description" content="Интерактивная карта культурных пространств Тирасполя" />
+        <meta property="og:locale" content="ru_RU" />
+        
+        <!-- Twitter -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Карта - Каталог современного искусства — Тирасполь" />
+        <meta name="twitter:description" content="Интерактивная карта культурных пространств Тирасполя" />
+        
+        <title>Карта - Каталог современного искусства — Тирасполь</title>
+        <link rel="stylesheet" href="styles/main.css" />
+    </head>
+    <body class="container">
+        <header class="header">
+            <div class="header__container">
+                <button class="header__burger" type="button" aria-label="Открыть меню" aria-expanded="false" id="burgerBtn">
+                    <span class="header__burger-line header__burger-line--first"></span>
+                    <span class="header__burger-line header__burger-line--second"></span>
+                    <span class="header__burger-line header__burger-line--third"></span>
+                </button>
+                <nav class="nav" id="mainNav">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="index.html" class="nav__link">Главная</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="events.html" class="nav__link">События</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="artists.html" class="nav__link">Художники</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="map.html" class="nav__link">Карта</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="calendar.html" class="nav__link">Календарь</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="budget.html" class="nav__link">Бюджет</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main class="main">
+            <section class="section">
+                <h2 class="section__title">
+                    Карта культурных пространств Тирасполя
+                </h2>
+                
+                <div class="map-filters" role="group" aria-label="Фильтры карты">
+                    <div class="map-filters__group">
+                        <label class="map-filters__label" id="map-filter-label">Тип пространства</label>
+                        <div class="map-filters__buttons" role="group" aria-labelledby="map-filter-label">
+                            <button class="map-filter-btn active" data-filter="all" type="button" aria-pressed="true">Все</button>
+                            <button class="map-filter-btn" data-filter="museum" type="button" aria-pressed="false">Музеи</button>
+                            <button class="map-filter-btn" data-filter="gallery" type="button" aria-pressed="false">Галереи</button>
+                            <button class="map-filter-btn" data-filter="art-center" type="button" aria-pressed="false">Арт-центры</button>
+                            <button class="map-filter-btn" data-filter="cluster" type="button" aria-pressed="false">Кластеры</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="map-wrapper">
+                    <div id="svg-map-container" class="svg-map-container" role="img" aria-label="Карта культурных пространств Тирасполя">
+                        <svg id="city-map" class="city-map" viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Упрощенная карта города -->
+                            <defs>
+                                <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+                                    <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+                                    <feOffset dx="2" dy="2" result="offsetblur"/>
+                                    <feComponentTransfer>
+                                        <feFuncA type="linear" slope="0.3"/>
+                                    </feComponentTransfer>
+                                    <feMerge>
+                                        <feMergeNode/>
+                                        <feMergeNode in="SourceGraphic"/>
+                                    </feMerge>
+                                </filter>
+                            </defs>
+                            
+                            
+                            <!-- Маркеры будут добавлены через JavaScript -->
+                            <g id="venue-markers" class="venue-markers"></g>
+                        </svg>
+                    </div>
+                    
+                    <div class="map-legend">
+                        <h3 class="map-legend__title">Легенда</h3>
+                        <div class="map-legend__items">
+                            <div class="map-legend__item">
+                                <span class="map-legend__marker map-legend__marker--museum"></span>
+                                <span class="map-legend__label">Музеи</span>
+                            </div>
+                            <div class="map-legend__item">
+                                <span class="map-legend__marker map-legend__marker--gallery"></span>
+                                <span class="map-legend__label">Галереи</span>
+                            </div>
+                            <div class="map-legend__item">
+                                <span class="map-legend__marker map-legend__marker--art-center"></span>
+                                <span class="map-legend__label">Арт-центры</span>
+                            </div>
+                            <div class="map-legend__item">
+                                <span class="map-legend__marker map-legend__marker--cluster"></span>
+                                <span class="map-legend__label">Кластеры</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        
+        <!-- Модальное окно для детальной информации -->
+        <div id="venueModal" class="venue-modal" role="dialog" aria-labelledby="venueModalTitle" aria-hidden="true">
+            <div class="venue-modal__overlay"></div>
+            <div class="venue-modal__content">
+                <button class="venue-modal__close" aria-label="Закрыть модальное окно" type="button">&times;</button>
+                <div id="venueModalBody" class="venue-modal__body"></div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <p class="footer__text">
+                Каталог современного искусства — Тирасполь
+            </p>
+            <p class="footer__text">Учебный проект</p>
+        </footer>
+        <script src="scripts/polyfills.js"></script>
+        <script src="scripts/data.js"></script>
+        <script src="scripts/common.js"></script>
+        <script src="scripts/header.js"></script>
+        <script src="scripts/map.js"></script>
+    </body>
+</html>

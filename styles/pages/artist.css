@@ -1,0 +1,188 @@
+.artist-profile {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.artist-profile__header {
+    display: flex;
+    flex-direction: row;
+    gap: var(--spacing-xl);
+    margin-bottom: var(--spacing-xxl);
+    align-items: flex-start;
+}
+
+.artist-profile__image {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.artist-profile__info {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.artist-profile__name {
+    margin-bottom: var(--spacing-sm);
+}
+
+.artist-profile__direction {
+    font-family: var(--font-body);
+    font-size: 18px;
+    color: var(--color-accent);
+    font-weight: 500;
+}
+
+.artist-profile__bio,
+.artist-profile__concept {
+    margin-bottom: var(--spacing-xxl);
+}
+
+.artist-profile__text {
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--color-dark);
+    opacity: 0.9;
+}
+
+.artist-portfolio {
+    margin-bottom: var(--spacing-xxl);
+}
+
+.portfolio-masonry {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-lg);
+}
+
+.portfolio-item {
+    background-color: var(--color-white);
+    border: 1px solid var(--color-gray);
+    overflow: hidden;
+    transition: transform var(--transition-base), box-shadow var(--transition-base);
+    display: flex;
+    flex-direction: column;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 20px rgba(44, 44, 44, 0.12);
+}
+
+.portfolio-item__image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    flex-shrink: 0;
+}
+
+.portfolio-item__content {
+    padding: var(--spacing-md);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.portfolio-item__title {
+    font-family: var(--font-heading);
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: var(--spacing-xs);
+    color: var(--color-dark);
+}
+
+.portfolio-item__year {
+    font-family: var(--font-body);
+    font-size: 14px;
+    color: var(--color-dark);
+    opacity: 0.7;
+}
+
+.artist-events {
+    margin-top: var(--spacing-xxl);
+}
+
+.events-list {
+    margin-top: var(--spacing-lg);
+}
+
+.event-item {
+    margin-bottom: var(--spacing-md);
+    padding: var(--spacing-md);
+    border-left: 3px solid var(--color-accent);
+    background-color: var(--color-white);
+}
+
+.event-item__title {
+    margin-bottom: var(--spacing-xs);
+}
+
+.event-item__link {
+    color: var(--color-dark);
+    text-decoration: none;
+    transition: color var(--transition-base);
+}
+
+.event-item__link:hover {
+    color: var(--color-accent);
+}
+
+.event-item__type {
+    font-family: var(--font-body);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--color-accent);
+    font-weight: 500;
+    margin-bottom: var(--spacing-xs);
+    display: block;
+}
+
+.event-item__date {
+    font-family: var(--font-body);
+    font-size: 14px;
+    color: var(--color-dark);
+    opacity: 0.7;
+}
+
+.artist-card__link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+/* Адаптивность для страницы художника */
+@media (max-width: 768px) {
+    .artist-profile__header {
+        flex-direction: column;
+        gap: var(--spacing-md);
+    }
+    
+    .artist-profile__image {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    
+    .portfolio-masonry {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: var(--spacing-md);
+    }
+}
+
+@media (max-width: 480px) {
+    .portfolio-masonry {
+        grid-template-columns: 1fr;
+    }
+    
+    .artist-profile__image {
+        width: 100%;
+        height: auto;
+    }
+}

@@ -1,0 +1,498 @@
+.map-filters {
+    background-color: var(--color-gray-light);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    margin-bottom: var(--spacing-lg);
+}
+
+.map-filters__group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.map-filters__label {
+    font-family: var(--font-heading);
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--color-dark);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.map-filters__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+}
+
+.map-filter-btn {
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--color-dark);
+    background-color: var(--color-white);
+    border: 2px solid var(--color-gray);
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all var(--transition-base);
+    white-space: nowrap;
+}
+
+.map-filter-btn:hover {
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+    transform: translateY(-2px);
+}
+
+.map-filter-btn.active {
+    background-color: var(--color-accent);
+    color: var(--color-white);
+    border-color: var(--color-accent);
+}
+
+.map-wrapper {
+    display: flex;
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+}
+
+.svg-map-container {
+    flex: 1;
+    background-color: var(--color-white);
+    border: 2px solid var(--color-gray);
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    min-height: 600px;
+    height: 600px;
+}
+
+.city-map {
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: #ffffff;
+    min-height: 600px;
+}
+
+.districts path {
+    transition: fill 0.3s ease, stroke 0.3s ease;
+}
+
+.districts path:hover {
+    fill: #d8e8f0;
+    stroke: #9bb8c8;
+}
+
+.parks {
+    pointer-events: none;
+}
+
+.districts {
+    pointer-events: none;
+}
+
+.streets {
+    pointer-events: none;
+}
+
+.venue-markers {
+    cursor: pointer;
+}
+
+.venue-marker-group {
+    cursor: pointer;
+}
+
+.marker-scale-group {
+    transform-origin: 0 0;
+    transition: transform 0.2s ease-out;
+}
+
+.venue-marker-group:hover .marker-scale-group {
+    transform: scale(1.2);
+}
+
+.venue-marker-group.marker-hover .marker-circle {
+    filter: brightness(1.2);
+}
+
+.marker-circle {
+    transition: filter 0.2s ease-out;
+    transform-origin: center center;
+}
+
+.venue-marker-group:hover .marker-circle {
+    filter: brightness(1.15) drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+}
+
+/* Легенда карты */
+.map-legend {
+    background-color: var(--color-gray-light);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    min-width: 200px;
+}
+
+.map-legend__title {
+    font-family: var(--font-heading);
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: var(--spacing-md);
+    color: var(--color-dark);
+}
+
+.map-legend__items {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.map-legend__item {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.map-legend__marker {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    flex-shrink: 0;
+}
+
+.map-legend__marker--museum {
+    background-color: #E63946;
+}
+
+.map-legend__marker--gallery {
+    background-color: #457B9D;
+}
+
+.map-legend__marker--art-center {
+    background-color: #2A9D8F;
+}
+
+.map-legend__marker--cluster {
+    background-color: #F77F00;
+}
+
+.map-legend__label {
+    font-family: var(--font-body);
+    font-size: 14px;
+    color: var(--color-dark);
+}
+
+/* Модальное окно */
+.venue-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity var(--transition-base), visibility var(--transition-base);
+}
+
+.venue-modal--active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.venue-modal__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+}
+
+.venue-modal__content {
+    position: relative;
+    background-color: var(--color-white);
+    border-radius: 8px;
+    max-width: 800px;
+    max-height: 90vh;
+    width: 90%;
+    overflow-y: auto;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    z-index: 1001;
+    animation: modalSlideIn 0.3s ease-out;
+}
+
+@keyframes modalSlideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.venue-modal__close {
+    position: absolute;
+    top: var(--spacing-md);
+    right: var(--spacing-md);
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: var(--color-gray);
+    color: var(--color-white);
+    font-size: 24px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color var(--transition-base);
+    z-index: 1002;
+}
+
+.venue-modal__close:hover {
+    background-color: var(--color-accent);
+}
+
+.venue-modal__body {
+    padding: var(--spacing-xl);
+}
+
+.venue-modal__header {
+    margin-bottom: var(--spacing-lg);
+    padding-left: var(--spacing-md);
+}
+
+.venue-modal__title {
+    font-family: var(--font-heading);
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: var(--spacing-xs);
+    color: var(--color-dark);
+}
+
+.venue-modal__type {
+    font-family: var(--font-body);
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+}
+
+.venue-modal__image {
+    margin-bottom: var(--spacing-lg);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.venue-modal__img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.venue-modal__info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+}
+
+.venue-info__section {
+    padding-bottom: var(--spacing-md);
+    border-bottom: 1px solid var(--color-gray);
+}
+
+.venue-info__section:last-child {
+    border-bottom: none;
+}
+
+.venue-info__heading {
+    font-family: var(--font-heading);
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-dark);
+}
+
+.venue-info__text {
+    font-family: var(--font-body);
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--color-dark);
+    margin-bottom: var(--spacing-xs);
+}
+
+.venue-info__text--how-to-get {
+    font-style: italic;
+    color: var(--color-dark);
+    opacity: 0.85;
+    margin-top: var(--spacing-xs);
+}
+
+.venue-info__schedule {
+    font-family: var(--font-body);
+    font-size: 15px;
+    line-height: 1.8;
+    color: var(--color-dark);
+    background-color: var(--color-gray-light);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    white-space: pre-line;
+    margin: 0;
+}
+
+.venue-info__price {
+    font-family: var(--font-heading);
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--color-accent);
+}
+
+.venue-info__description {
+    font-family: var(--font-body);
+    font-size: 15px;
+    line-height: 1.8;
+    color: var(--color-dark);
+}
+
+.venue-info__link {
+    color: var(--color-accent);
+    text-decoration: none;
+    transition: color var(--transition-base);
+    font-weight: 500;
+}
+
+.venue-info__link:hover {
+    color: var(--color-dark);
+    text-decoration: underline;
+}
+
+.venue-info__link--maps {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    margin-top: var(--spacing-sm);
+    padding: var(--spacing-sm) var(--spacing-md);
+    background-color: var(--color-gray-light);
+    border-radius: 8px;
+    transition: background-color var(--transition-base);
+}
+
+.venue-info__link--maps:hover {
+    background-color: var(--color-gray);
+    text-decoration: none;
+}
+
+.venue-events__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.venue-events__item {
+    margin-bottom: var(--spacing-sm);
+    padding: var(--spacing-sm);
+    background-color: var(--color-gray-light);
+    border-radius: 8px;
+    transition: background-color var(--transition-base);
+}
+
+.venue-events__item:hover {
+    background-color: var(--color-gray);
+}
+
+.venue-events__item--empty {
+    font-style: italic;
+    opacity: 0.6;
+    background-color: transparent;
+}
+
+.venue-events__link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    color: var(--color-dark);
+    gap: var(--spacing-md);
+}
+
+.venue-events__title {
+    font-family: var(--font-heading);
+    font-size: 16px;
+    font-weight: 600;
+    flex: 1;
+}
+
+.venue-events__date {
+    font-family: var(--font-body);
+    font-size: 14px;
+    color: var(--color-dark);
+    opacity: 0.7;
+    white-space: nowrap;
+}
+
+.venue-events__link:hover .venue-events__title {
+    color: var(--color-accent);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .map-wrapper {
+        flex-direction: column;
+    }
+    
+    .svg-map-container {
+        height: 500px;
+    }
+    
+    .city-map {
+        height: 500px;
+    }
+    
+    .map-legend {
+        min-width: auto;
+    }
+    
+    .venue-modal__content {
+        width: 95%;
+        max-height: 95vh;
+    }
+    
+    .venue-modal__body {
+        padding: var(--spacing-md);
+    }
+    
+    .venue-modal__title {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 480px) {
+    .svg-map-container {
+        height: 400px;
+    }
+    
+    .city-map {
+        height: 400px;
+    }
+    
+    .map-filters__buttons {
+        gap: var(--spacing-xs);
+    }
+    
+    .map-filter-btn {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+}
