@@ -405,7 +405,7 @@ const events = [
     },
     {
         id: 2,
-        image: 'https://34travel.me/media/upload/images/2016/july/Moden_art/4m%20(2).jpg',
+        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgZdhjYddGMoefm_v6A1qhfDPNVpBXdA7wfQ&s',
         alt: 'Перформанс Границы',
         title: 'Границы',
         type: 'Перформанс',
@@ -521,7 +521,7 @@ const events = [
     // Дополнительные выставки
     {
         id: 7,
-        image: 'https://yarcube.ru/upload/medialibrary/bef/zyrpp7pjwkq5bsu9ii628k6o1j59r2xw/photo_2026_02_06_18_18_58.jpg',
+        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPkJaF65qRGVIAXl_JfeeOGavr17w02-w9hQ&s',
         alt: 'Выставка Фотография сегодня',
         title: 'Фотография сегодня',
         type: 'Выставка',
@@ -587,7 +587,7 @@ const events = [
     },
     {
         id: 10,
-        image: 'https://pohcdn.com/sites/default/files/styles/paragraph__hero_banner__hb_image__1880bp/public/hero_banner/skulptura-davida.jpg',
+        image: 'https://bizar.art/api/media/imgproxy/insecure/fit/500/600/ce/0/KohiAwica1NWYuv-TQHDD?3',
         alt: 'Выставка Скульптура',
         title: 'Современная скульптура',
         type: 'Выставка',
@@ -631,7 +631,7 @@ const events = [
     // Лекции и дискуссии (5-6 событий)
     {
         id: 12,
-        image: 'https://historyrussia.org/images/Ltkcia-partizan-Italian/SHAL7135-1.jpg',
+        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQM9YiPDUiUv4zHbMNB7tDiTeazQ_Vk1NGjhQ&s',
         alt: 'Лекция История фотографии',
         title: 'История фотографии',
         type: 'Лекция',
@@ -653,7 +653,7 @@ const events = [
     },
     {
         id: 13,
-        image: 'https://rb.ru/media/upload_tmp/2018/be11d0684213a1062d47f03c6fd33de7.jpg',
+        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT03a7PgTw_hIET1-Zg7amAmX23JpOFd5aZIg&s',
         alt: 'Дискуссия Искусство и технологии',
         title: 'Искусство и технологии',
         type: 'Лекция',
@@ -718,7 +718,7 @@ const events = [
     },
     {
         id: 16,
-        image: 'https://kouros.studio/wp-content/uploads/2021/06/%D0%92%D0%BB%D0%B0%D0%B4%D0%B8%D0%BC%D0%B8%D1%80-%D0%91%D1%80%D0%BE%D0%B4%D0%B0%D1%80%D1%81%D0%BA%D0%B8%D0%B9-%D0%BF%D0%B5%D1%80%D0%B5%D0%B4-%D0%BC%D0%BE%D0%B4%D0%B5%D0%BB%D1%8C%D1%8E-%D0%BF%D0%B0%D0%BC%D1%8F%D1%82%D0%BD%D0%B8%D0%BA%D0%B0-%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80%D1%83-III-2021.jpg',
+        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDn5lfmuP-uSh38q6s2sJSn38_97w6Md7Qbw&s',
         alt: 'Лекция Скульптура 21 века',
         title: 'Скульптура 21 века',
         type: 'Лекция',
@@ -738,7 +738,7 @@ const events = [
     },
     {
         id: 17,
-        image: 'https://artline.ua/storage/images/editor/editor_1603103659607208_0.png',
+        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSknWOmM0RE7ibqBxiKJgC315WdGXf7cnkf0A&s',
         alt: 'Дискуссия Женщины в искусстве',
         title: 'Женщины в современном искусстве',
         type: 'Лекция',
@@ -802,7 +802,7 @@ const events = [
     },
     {
         id: 20,
-        image: 'https://live.staticflickr.com/65535/53866365038_abeb572da0_o.jpg',
+        image: 'https://photo-study.ru/files/styles/1000w/public/events/di_2.jpg?itok=6VSP0N25',
         alt: 'Мастер-класс Цифровое искусство',
         title: 'Цифровое искусство',
         type: 'Мастер-класс',
@@ -865,7 +865,7 @@ const events = [
     },
     {
         id: 23,
-        image: 'https://globalcity.info/assets/a3f9b096/images/51/2022/10/99b27f9ada6b9ef4ccb8a269a181f841.jpg/335x280.jpg',
+        image: 'https://www.akcent.uk/uploads/article/image/9384/v780x400_1.png',
         alt: 'Перформанс Тело',
         title: 'Тело и пространство',
         type: 'Перформанс',
