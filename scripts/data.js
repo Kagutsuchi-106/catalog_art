@@ -231,6 +231,8 @@ const venues = [
         image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQF4tbe9HTvX_pcbfKkUxeu4WBmG1EKZJH9Ww&s',
         svgX: 550,
         svgY: 200,
+        lat: 46.8450,
+        lng: 29.6400,
     },
     {
         id: 2,
@@ -249,6 +251,8 @@ const venues = [
         image: 'https://tourismpmr.org/wp-content/uploads/2021/04/muzej-1-1024x683.jpg',
         svgX: 580,
         svgY: 280,
+        lat: 46.8380,
+        lng: 29.6350,
     },
     {
         id: 3,
@@ -267,6 +271,8 @@ const venues = [
         image: 'https://lh3.googleusercontent.com/gps-cs-s/AG0ilSzQnDYJkAQoRr9l0ghvQVK2Qg7xgs23ZzZ-BeFJEthhGoOwTaaXQ_f0h5mngcvOhrEk47L_RKmQU7hZgMTA1xX6DdEDglk73wKdX9nNceCNfZPYTG9CWbl9OeojdtigmK2VyX2SVg=s1360-w1360-h1020-rw',
         svgX: 620,
         svgY: 150,
+        lat: 46.8500,
+        lng: 29.6450,
     },
     {
         id: 4,
@@ -285,6 +291,8 @@ const venues = [
         image: 'https://pridnestrovie-tourism.com/wp-content/uploads/2025/01/shp-2025_11.jpg',
         svgX: 480,
         svgY: 220,
+        lat: 46.8320,
+        lng: 29.6300,
     },
     {
         id: 5,
@@ -303,6 +311,8 @@ const venues = [
         image: 'https://tourismpmr.org/wp-content/uploads/2023/11/20200910-img_1319-1024x683.jpg',
         svgX: 450,
         svgY: 250,
+        lat: 46.8420,
+        lng: 29.6250,
     },
     {
         id: 6,
@@ -321,6 +331,8 @@ const venues = [
         image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRC5pBspLjssf1iOsqJ32EVICUHRQ57JintJw&s',
         svgX: 520,
         svgY: 300,
+        lat: 46.8350,
+        lng: 29.6500,
     },
     {
         id: 7,
@@ -339,6 +351,8 @@ const venues = [
         image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0pnZirn2ZA2rEe2osHZmUWk1aFz92WfxMng&s',
         svgX: 350,
         svgY: 350,
+        lat: 46.8480,
+        lng: 29.6200,
     },
     {
         id: 8,
@@ -357,6 +371,8 @@ const venues = [
         image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjh3IX22f9C8BtBs4qe2joydDu_Yi4PBMaFw&s',
         svgX: 320,
         svgY: 380,
+        lat: 46.8400,
+        lng: 29.6150,
     },
     {
         id: 9,
@@ -375,6 +391,8 @@ const venues = [
         image: 'https://avatars.mds.yandex.net/get-altay/200322/2a0000015b16efa7caa40ba626730eebc054/XL',
         svgX: 280,
         svgY: 420,
+        lat: 46.8300,
+        lng: 29.6100,
     },
 ];
 

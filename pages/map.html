@@ -20,7 +20,8 @@
         <meta name="twitter:description" content="Интерактивная карта культурных пространств Тирасполя" />
         
         <title>Карта - Каталог современного искусства — Тирасполь</title>
-        <link rel="stylesheet" href="styles/main.css" />
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+        <link rel="stylesheet" href="../blocks/__blocks.css" />
     </head>
     <body class="container">
         <header class="header">
@@ -33,7 +34,7 @@
                 <nav class="nav" id="mainNav">
                     <ul class="nav__list">
                         <li class="nav__item">
-                            <a href="index.html" class="nav__link">Главная</a>
+                            <a href="../index.html" class="nav__link">Главная</a>
                         </li>
                         <li class="nav__item">
                             <a href="events.html" class="nav__link">События</a>
@@ -75,28 +76,7 @@
                 </div>
                 
                 <div class="map-wrapper">
-                    <div id="svg-map-container" class="svg-map-container" role="img" aria-label="Карта культурных пространств Тирасполя">
-                        <svg id="city-map" class="city-map" viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg">
-                            <!-- Упрощенная карта города -->
-                            <defs>
-                                <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
-                                    <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
-                                    <feOffset dx="2" dy="2" result="offsetblur"/>
-                                    <feComponentTransfer>
-                                        <feFuncA type="linear" slope="0.3"/>
-                                    </feComponentTransfer>
-                                    <feMerge>
-                                        <feMergeNode/>
-                                        <feMergeNode in="SourceGraphic"/>
-                                    </feMerge>
-                                </filter>
-                            </defs>
-                            
-                            
-                            <!-- Маркеры будут добавлены через JavaScript -->
-                            <g id="venue-markers" class="venue-markers"></g>
-                        </svg>
-                    </div>
+                    <div id="map-container" class="map-container"></div>
                     
                     <div class="map-legend">
                         <h3 class="map-legend__title">Легенда</h3>
@@ -138,10 +118,11 @@
             </p>
             <p class="footer__text">Учебный проект</p>
         </footer>
-        <script src="scripts/polyfills.js"></script>
-        <script src="scripts/data.js"></script>
-        <script src="scripts/common.js"></script>
-        <script src="scripts/header.js"></script>
-        <script src="scripts/map.js"></script>
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+        <script src="../scripts/polyfills.js"></script>
+        <script src="../scripts/data.js"></script>
+        <script src="../scripts/common.js"></script>
+        <script src="../blocks/header/header.js"></script>
+        <script src="../blocks/pages/map.js"></script>
     </body>
 </html>

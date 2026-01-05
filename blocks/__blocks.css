@@ -1,0 +1,26 @@
+/* Главный файл импорта всех блоков БЭМ */
+
+/* Base */
+@import url('../styles/base/_variables.css');
+@import url('../styles/base/_reset.css');
+@import url('../styles/base/_typography.css');
+@import url('../styles/base/_accessibility.css');
+
+/* Блоки */
+@import url('./header/header.css');
+@import url('./footer/footer.css');
+@import url('./grid/grid.css');
+@import url('./section/section.css');
+@import url('./event-card/event-card.css');
+@import url('./artist-card/artist-card.css');
+@import url('./calendar/calendar.css');
+@import url('./budget/budget.css');
+@import url('./modal/modal.css');
+@import url('./filters/filters.css');
+
+/* Страничные стили */
+@import url('./pages/home.css');
+@import url('./pages/event.css');
+@import url('./pages/artist.css');
+@import url('./pages/map.css');
+

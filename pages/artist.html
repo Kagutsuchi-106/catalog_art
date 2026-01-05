@@ -1,10 +1,25 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" itemscope itemtype="https://schema.org/ProfilePage">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Календарь - Каталог современного искусства — Тирасполь</title>
-        <link rel="stylesheet" href="styles/main.css" />
+        <meta name="description" content="Профиль современного художника. Биография, концепция творчества, портфолио работ и участие в мероприятиях." />
+        <meta name="keywords" content="художник, современное искусство, портфолио, биография художника" />
+        <meta name="author" content="Каталог современного искусства — Тирасполь" />
+        
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="profile" />
+        <meta property="og:title" content="Художник - Каталог современного искусства — Тирасполь" />
+        <meta property="og:description" content="Профиль современного художника" />
+        <meta property="og:locale" content="ru_RU" />
+        
+        <!-- Twitter -->
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="Художник - Каталог современного искусства — Тирасполь" />
+        <meta name="twitter:description" content="Профиль современного художника" />
+        
+        <title>Художник - Каталог современного искусства — Тирасполь</title>
+        <link rel="stylesheet" href="../blocks/__blocks.css" />
     </head>
     <body class="container">
         <header class="header">
@@ -41,8 +56,7 @@
 
         <main class="main">
             <section class="section">
-                <h2 class="section__title">Персональный календарь</h2>
-                <div id="calendar-list" class="calendar-list"></div>
+                <div id="artist-content"></div>
             </section>
         </main>
 
@@ -52,9 +66,10 @@
             </p>
             <p class="footer__text">Учебный проект</p>
         </footer>
-        <script src="scripts/data.js"></script>
-        <script src="scripts/common.js"></script>
-        <script src="scripts/header.js"></script>
-        <script src="scripts/calendar.js"></script>
+        <script src="../scripts/polyfills.js"></script>
+        <script src="../scripts/data.js"></script>
+        <script src="../scripts/common.js"></script>
+        <script src="../blocks/header/header.js"></script>
+        <script src="../blocks/artist-card/artist.js"></script>
     </body>
 </html>
