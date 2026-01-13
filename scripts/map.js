@@ -151,7 +151,7 @@ function openVenueModal(venue) {
     const eventsHTML = venueEvents.length > 0
         ? venueEvents.map(event => `
             <li class="venue-events__item">
-                <a href="event.html?id=${event.id}" class="venue-events__link">
+                <a href="${getPagePath('event.html')}?id=${event.id}" class="venue-events__link">
                     <span class="venue-events__title">${event.title}</span>
                     <span class="venue-events__date">${event.date}</span>
                 </a>

@@ -2,14 +2,19 @@
 .artist-card {
     display: flex;
     flex-direction: column;
-    background-color: var(--color-white);
-    border: 1px solid var(--color-gray);
-    transition: transform var(--transition-base), box-shadow var(--transition-base);
+    background-color: rgba(255, 255, 255, 0.96);
+    border-radius: 16px;
+    border: 1px solid rgba(229, 229, 229, 0.9);
+    box-shadow: 0 18px 45px rgba(44, 44, 44, 0.08);
+    overflow: hidden;
+    transform-origin: center;
+    transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
 }
 
 .artist-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 6px 20px rgba(44, 44, 44, 0.12);
+    transform: translateY(-6px) scale(1.01);
+    box-shadow: 0 24px 60px rgba(44, 44, 44, 0.16);
+    border-color: var(--color-accent);
 }
 
 /* Элементы artist-card */
@@ -23,12 +28,13 @@
 .artist-card__content {
     display: flex;
     flex-direction: column;
-    padding: var(--spacing-md);
+    padding: var(--spacing-lg);
     text-align: center;
 }
 
 .artist-card__name {
     margin-bottom: var(--spacing-xs);
+    font-size: 20px;
 }
 
 .artist-card__direction {
@@ -42,6 +48,7 @@
     text-decoration: none;
     color: inherit;
     display: block;
+    height: 100%;
 }
 
 /* Адаптивность для карточек художников */

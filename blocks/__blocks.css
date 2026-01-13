@@ -1,10 +1,10 @@
 /* Главный файл импорта всех блоков БЭМ */
 
 /* Base */
-@import url('../styles/base/_variables.css');
-@import url('../styles/base/_reset.css');
-@import url('../styles/base/_typography.css');
-@import url('../styles/base/_accessibility.css');
+@import url('./base/_variables.css');
+@import url('./base/_reset.css');
+@import url('./base/_typography.css');
+@import url('./base/_accessibility.css');
 
 /* Блоки */
 @import url('./header/header.css');

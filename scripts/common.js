@@ -60,5 +60,20 @@ function getVenueById(venueId) {
     return venues.find(venue => venue.id === venueId);
 }
 
+// Функция для определения правильного пути к страницам
+function getPagePath(pageName) {
+    // Проверяем, находимся ли мы в папке pages/
+    const pathname = window.location.pathname;
+    const isInPagesFolder = pathname.includes('/pages/') || pathname.includes('\\pages\\');
+    
+    if (isInPagesFolder) {
+        // Если мы в папке pages/, используем относительный путь
+        return pageName;
+    } else {
+        // Если мы в корне, добавляем префикс pages/
+        return `pages/${pageName}`;
+    }
+}
+
 
 

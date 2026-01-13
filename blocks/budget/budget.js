@@ -516,7 +516,7 @@ function renderBudgetList() {
         return `
             <article class="budget-item" data-event-id="${event.id}">
                 <div class="budget-item__content">
-                    <h3 class="budget-item__title"><a href="event.html?id=${event.id}" class="budget-item__link">${event.title}</a></h3>
+                    <h3 class="budget-item__title"><a href="${getPagePath('event.html')}?id=${event.id}" class="budget-item__link">${event.title}</a></h3>
                     <p class="budget-item__text"><strong>Дата:</strong> ${event.date}</p>
                     <p class="budget-item__text"><strong>Тип:</strong> ${event.type || 'Не указан'}</p>
                     <p class="budget-item__text"><strong>Стоимость:</strong> ${priceDisplay}</p>

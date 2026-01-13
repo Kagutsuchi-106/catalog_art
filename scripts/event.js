@@ -28,13 +28,13 @@ function renderEvent() {
     
     const artistsLinks = eventArtists.length > 0
         ? eventArtists.map(artist => 
-            `<a href="artist.html?id=${artist.id}" class="event-content__link">${artist.name}</a>`
+            `<a href="${getPagePath('artist.html')}?id=${artist.id}" class="event-content__link">${artist.name}</a>`
           ).join(', ')
         : 'Не указаны';
     
     const venue = getVenueById(event.venueId);
     const venueLink = venue 
-        ? `<a href="map.html#venue-${venue.id}" class="event-content__link">${venue.name}</a>`
+        ? `<a href="${getPagePath('map.html')}#venue-${venue.id}" class="event-content__link">${venue.name}</a>`
         : 'Не указана';
 
     const priceValue = event.price.match(/(\d+)/) ? parseInt(event.price.match(/(\d+)/)[1]) : 0;
@@ -115,13 +115,13 @@ function renderEvent() {
                 <div class="event-detail__row">
                     <p class="event-detail__row-text"><strong>Художник${eventArtists.length > 1 ? 'и' : ''}:</strong> 
                         ${eventArtists.map(artist => 
-                            `<a href="artist.html?id=${artist.id}" class="event-content__link" itemprop="performer" itemscope itemtype="https://schema.org/Person">
+                            `<a href="${getPagePath('artist.html')}?id=${artist.id}" class="event-content__link" itemprop="performer" itemscope itemtype="https://schema.org/Person">
                                 <span itemprop="name">${artist.name}</span>
                             </a>`
                         ).join(', ')}
                     </p>
                     <p class="event-detail__row-text"><strong>Площадка:</strong> 
-                        ${venue ? `<a href="map.html#venue-${venue.id}" class="event-content__link" itemprop="location" itemscope itemtype="https://schema.org/Place">
+                        ${venue ? `<a href="${getPagePath('map.html')}#venue-${venue.id}" class="event-content__link" itemprop="location" itemscope itemtype="https://schema.org/Place">
                             <span itemprop="name">${venue.name}</span>
                         </a>` : 'Не указана'}
                     </p>

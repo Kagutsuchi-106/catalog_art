@@ -268,7 +268,7 @@ function createEventCard(event) {
                  itemtype="https://schema.org/Event"
                  role="listitem"
                  aria-label="${event.title}">
-            <a href="event.html?id=${event.id}" class="event-card" itemprop="url" aria-label="Подробнее о событии ${event.title}">
+            <a href="${getPagePath('event.html')}?id=${event.id}" class="event-card" itemprop="url" aria-label="Подробнее о событии ${event.title}">
                 <picture>
                     <source srcset="${imageWebP}" type="image/webp">
                     <img src="${event.image}" 

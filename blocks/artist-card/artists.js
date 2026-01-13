@@ -5,7 +5,7 @@ function createArtistCard(artist) {
                  itemscope 
                  itemtype="https://schema.org/Person"
                  role="listitem">
-            <a href="artist.html?id=${artist.id}" class="artist-card__link" itemprop="url" aria-label="Подробнее о художнике ${artist.name}">
+            <a href="${getPagePath('artist.html')}?id=${artist.id}" class="artist-card__link" itemprop="url" aria-label="Подробнее о художнике ${artist.name}">
                 <picture>
                     <source srcset="${artist.image.replace(/\.(jpg|jpeg|png)$/i, '.webp')}" type="image/webp">
                     <img src="${artist.image}" 

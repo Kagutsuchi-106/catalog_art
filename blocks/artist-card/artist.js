@@ -69,7 +69,7 @@ function renderArtist() {
                                  itemscope 
                                  itemtype="https://schema.org/Event">
                             <h3 class="event-item__title">
-                                <a href="event.html?id=${event.id}" 
+                                <a href="${getPagePath('event.html')}?id=${event.id}" 
                                    class="event-item__link"
                                    itemprop="url">
                                     <span itemprop="name">${event.title}</span>

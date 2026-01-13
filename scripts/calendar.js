@@ -14,7 +14,7 @@ function renderCalendar() {
     const listHTML = favoriteEvents.map(event => `
         <article class="calendar-item">
             <span class="calendar-item__date">${event.date}</span>
-            <h3 class="calendar-item__title"><a href="event.html?id=${event.id}" class="calendar-item__link">${event.title}</a></h3>
+            <h3 class="calendar-item__title"><a href="${getPagePath('event.html')}?id=${event.id}" class="calendar-item__link">${event.title}</a></h3>
         </article>
     `).join('');
 
