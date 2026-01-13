@@ -60,6 +60,37 @@
             </section>
         </main>
 
+        <!-- Модальное окно портфолио -->
+        <div id="portfolioModal" class="portfolio-modal" role="dialog" aria-labelledby="portfolioModalTitle" aria-hidden="true">
+            <div class="portfolio-modal__overlay"></div>
+            <div class="portfolio-modal__content">
+                <div class="portfolio-modal__header">
+                    <h2 id="portfolioModalTitle" class="portfolio-modal__title"></h2>
+                    <button class="portfolio-modal__close" aria-label="Закрыть модальное окно" type="button">&times;</button>
+                </div>
+                <div class="portfolio-modal__body">
+                    <div class="portfolio-modal-work">
+                        <div class="portfolio-modal-work__image-wrapper">
+                            <img src="" alt="" class="portfolio-modal-work__image" loading="eager">
+                        </div>
+                        <div class="portfolio-modal-work__info">
+                            <div class="portfolio-modal-work__meta">
+                                <div class="portfolio-modal-work__meta-item">
+                                    <span class="portfolio-modal-work__meta-label">Год</span>
+                                    <span class="portfolio-modal-work__meta-value portfolio-modal-work__meta-value--year"></span>
+                                </div>
+                                <div class="portfolio-modal-work__meta-item">
+                                    <span class="portfolio-modal-work__meta-label">Техника</span>
+                                    <span class="portfolio-modal-work__meta-value portfolio-modal-work__meta-value--technique"></span>
+                                </div>
+                            </div>
+                            <p class="portfolio-modal-work__description"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <footer class="footer">
             <p class="footer__text">
                 Каталог современного искусства — Тирасполь
@@ -70,6 +101,7 @@
         <script src="../scripts/data.js"></script>
         <script src="../scripts/common.js"></script>
         <script src="../blocks/header/header.js"></script>
+        <script src="../blocks/portfolio-modal/portfolio-modal.js"></script>
         <script src="../blocks/artist-card/artist.js"></script>
     </body>
 </html>
